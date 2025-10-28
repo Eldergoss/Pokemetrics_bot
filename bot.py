@@ -3,7 +3,7 @@ import telebot
 from buscador import buscar_y_procesar
 
 # ⚠️ Coloca aquí tu token real de Telegram
-TOKEN = "8421638351:AAG7zBomi8eMPtBiNwbzDBCqrg5wTcDW69M"
+TOKEN = ""
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -30,3 +30,4 @@ def buscar(message):
 if __name__ == "__main__":
     print("🤖 Bot en ejecución...")
     bot.infinity_polling()
+

@@ -32,7 +32,7 @@ def buscar_y_procesar(entrada: str):
         query += f" set.name:{sets}"
 
     start = time.time()
-    cards = Card.where(q=query, orderBy='set.releaseDate', page=1, pageSize=20)
+    cards = Card.where(q=query, orderBy='set.releaseDate', page=1, pageSize=10)
     end = time.time()
 
     resultados = []
@@ -52,3 +52,4 @@ def buscar_y_procesar(entrada: str):
 
     tiempo = f"⏱ {end - start:.2f} s"
     return f"🔍 Resultados para '{entrada}':\n\n" + "\n\n".join(resultados) + f"\n\n{tiempo}"
+
